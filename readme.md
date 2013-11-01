@@ -1,7 +1,7 @@
 # App in Django with MongoDB
 
-App in [Django][https://docs.djangoproject.com] for to host MovieManiacs at iic2173.
-It uses [Django mongodb engine][http://django-mongodb-engine.readthedocs.org]
+App in [Django](https://docs.djangoproject.com) for to host MovieManiacs at iic2173.
+It uses [Django mongodb engine](http://django-mongodb-engine.readthedocs.org)
 
 
 ## Instalation 
