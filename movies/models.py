@@ -10,17 +10,17 @@ class Movie(models.Model):
     actors = ListField(EmbeddedModelField('Actor') )
     director = EmbeddedModelField('Director') 
     tags = ListField(EmbeddedModelField('Tag'))
-    text = models.TextField()
-    title = models.CharField()
-    year = models.CharField()
+    text = models.TextField(max_length=200)
+    title = models.CharField(max_length=200)
+    year = models.CharField(max_length=200)
 
 
 class Actor(models.Model):
-    name = models.CharField()
-    character = models.CharField()
+    name = models.CharField(max_length=200)
+    character = models.CharField(max_length=200)
 
 class Director(models.Model):
-    name = models.CharField()
+    name = models.CharField(max_length=200)
 
 class Tag(models.Model):
-    name = models.CharField()
+    name = models.CharField(max_length=200)
