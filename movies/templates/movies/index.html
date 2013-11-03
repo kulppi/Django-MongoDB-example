@@ -1,0 +1,9 @@
+{% if latest_movie_list %}
+    <ul>
+    {% for movie in latest_movie_list %}
+        <li><a href="/movies/{{ movie.id }}/">{{ movie.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No movies are available.</p>
+{% endif %}

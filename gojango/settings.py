@@ -13,6 +13,12 @@ DATABASES = {
    'default' : {
       'ENGINE' : 'django_mongodb_engine',
       'NAME' : 'my_database'
+    #  'ENGINE' : 'django_mongodb_engine',
+    #  'NAME' : 'MovieManiacs',
+    #   'USER': 'grupo1',
+    #   'PASSWORD': 'iic2173',
+    #   'HOST': 'arqui1.ing.puc.cl',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+    #   'PORT': 27020,
    }
 }
 

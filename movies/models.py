@@ -1,5 +1,4 @@
 from django.db import models
-
 from djangotoolbox.fields import ListField
 
 # Create your models here.
@@ -7,13 +6,13 @@ from djangotoolbox.fields import ListField
 from djangotoolbox.fields import EmbeddedModelField
 class Movie(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
-    actors = ListField(EmbeddedModelField('Actor') )
-    director = EmbeddedModelField('Director') 
     tags = ListField(EmbeddedModelField('Tag'))
     text = models.TextField(max_length=200)
     title = models.CharField(max_length=200)
     year = models.CharField(max_length=200)
-
+    genre = models.CharField(max_length=200)
+    synopsis = models.CharField(max_length=200)
+    rating = models.IntegerField(default=0)
 
 class Actor(models.Model):
     name = models.CharField(max_length=200)
