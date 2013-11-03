@@ -4,7 +4,7 @@ from djangotoolbox.fields import ListField
 # Create your models here.
 
 from djangotoolbox.fields import EmbeddedModelField
-class Movie(models.Model):
+class Movies(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     tags = ListField(EmbeddedModelField('Tag'))
     text = models.TextField(max_length=200)

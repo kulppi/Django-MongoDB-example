@@ -1,10 +1,10 @@
 from django.http import HttpResponse
 from django.template import RequestContext, loader
-from movies.models import Movie
+from movies.models import Movies
 from django.shortcuts import render
 
 def index(request):
-    latest_movie_list = Movie.objects.order_by('-year')[:5]
+    latest_movie_list = Movies.objects.all()[:5]
     template = loader.get_template('movies/index.html')
     context = RequestContext(request, {
         'latest_movie_list': latest_movie_list,
@@ -13,7 +13,7 @@ def index(request):
 
 def detail(request, pk):
     try:
-        movie = Movie.objects.get(pk=pk)
+        movie = Movies.objects.get(pk=pk)
     except Movie.DoesNotExist:
         raise Http404
     return render(request, 'movies/detail.html', {'movie': movie})
