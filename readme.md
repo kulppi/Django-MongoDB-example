@@ -6,7 +6,7 @@ It uses [Django mongodb engine](http://django-mongodb-engine.readthedocs.org)
 
 ## Instalation 
 
-Requiere: PIP & Python 2.7.1 (at least, I used that )
+Requires: PIP & Python 2.7.1 (at least, I used that )
 ### Django
 ```bash
 #  https://docs.djangoproject.com/en/dev/topics/install/
